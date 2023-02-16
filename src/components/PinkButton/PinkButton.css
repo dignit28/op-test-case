@@ -1,0 +1,39 @@
+.pink-button {
+  display: inline-block;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 15px 33px 15px 20px;
+  border-radius: 40px;
+  background-color: #ff6a9f;
+}
+
+.pink-button_icon-container {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  margin: auto;
+  height: 50px;
+  background-color: #000000;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.55),
+    -3px -3px 5px rgba(0, 0, 20, 0.5);
+}
+
+.pink-button_text {
+  float: left;
+  margin-left: 17px;
+  font-size: 28px;
+  font-family: "DIN Pro";
+  color: rgb(23, 23, 23);
+  line-height: 49px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.pink-button_icon {
+  font-family: "Gilroy";
+  font-size: 30px;
+  color: #ffffff;
+}

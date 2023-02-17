@@ -30,6 +30,7 @@
   line-height: 49px;
   letter-spacing: 0.5px;
   text-align: left;
+  text-transform: none;
 }
 
 .pink-button_icon {

@@ -1,6 +1,58 @@
+.slide-one_content {
+    position: absolute;
+    z-index: 2;
+}
+
+.slide_key-text {
+  font-family: "DIN Pro";
+  margin: 0;
+  padding-top: 169px;
+  padding-left: 69px;
+  font-size: 27px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.slide_title-text {
+  font-family: "Gilroy";
+  margin: 0;
+  padding-top: 15px;
+  padding-left: 69px;
+  font-size: 109px;
+  line-height: 117px;
+  font-weight: 300;
+  letter-spacing: 6.1px;
+  text-transform: uppercase;
+}
+
+.slide_title-text-end{
+    padding-right: 36px;
+}
+
+.slide_title-text-bold {
+  font-weight: 800;
+}
+
 /* Particles */
 .slide-one_particles {
-  position: relative;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.slide-one_particles__under {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+}
+
+.slide-one_particles__over {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  position: absolute;
 }
 
 .slide-one_particle {

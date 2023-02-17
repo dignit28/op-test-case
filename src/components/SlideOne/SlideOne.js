@@ -14,7 +14,7 @@ function SlideOne(props) {
   return (
     <div className="slide">
       <div className="slide-one">
-        <div className="slide-one_particles">
+        <div className="slide-one_particles slide-one_particles__under">
           <img
             className="slide-one_particle slide-one_particle__1"
             alt="Фоновая частица"
@@ -36,12 +36,19 @@ function SlideOne(props) {
             src={SpermUnderSlide1}
           />
         </div>
-        <PinkButton
-          icon={{ type: "image", source: "arrow" }}
-          text="Что дальше?"
-          buttonFunction={props.scrollToSecondSlide}
-        />
-        <div className="slide-one_particles">
+        <div className="slide-one_content">
+          <h2 className="slide_key-text">Привет,</h2>
+          <h1 className="slide_title-text">
+            Это <strong className="slide_title-text-bold">не</strong>{" "}
+            коммерческое <span className="slide_title-text-end">задание</span>
+            <PinkButton
+              icon={{ type: "image", source: "arrow" }}
+              text="Что дальше?"
+              buttonFunction={props.scrollToSecondSlide}
+            />
+          </h1>
+        </div>
+        <div className="slide-one_particles slide-one_particles__over">
           <img
             className="slide-one_particle slide-one_particle__5"
             alt="Фоновая частица"

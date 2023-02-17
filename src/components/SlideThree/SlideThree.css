@@ -1,0 +1,15 @@
+/* Particles */
+.slide-three_particles {
+  position: relative;
+  z-index: 101;
+}
+
+.slide-three_particle {
+  position: absolute;
+}
+
+/* Bottle */
+.slide-three_particle__1 {
+  top: -4px;
+  left: 50px;
+}

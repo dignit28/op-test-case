@@ -17,22 +17,22 @@ function SlideOne(props) {
         <div className="slide-one_particles">
           <img
             className="slide-one_particle slide-one_particle__1"
-            alt="Background particle"
+            alt="Фоновая частица"
             src={BacteriaLongSlide1}
           />
           <img
             className="slide-one_particle slide-one_particle__2"
-            alt="Background particle"
+            alt="Фоновая частица"
             src={BlurLargeSlide1}
           />
           <img
             className="slide-one_particle slide-one_particle__3"
-            alt="Background particle"
+            alt="Фоновая частица"
             src={BlurSmallSlide1}
           />
           <img
             className="slide-one_particle slide-one_particle__4"
-            alt="Background particle"
+            alt="Фоновая частица"
             src={SpermUnderSlide1}
           />
         </div>
@@ -44,7 +44,7 @@ function SlideOne(props) {
         <div className="slide-one_particles">
           <img
             className="slide-one_particle slide-one_particle__5"
-            alt="Background particle"
+            alt="Фоновая частица"
             src={SpermOverSlide1}
           />
         </div>

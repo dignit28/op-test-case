@@ -1,4 +1,6 @@
 import React from "react";
+// Images
+import Bottle from "./images/Bottle.png";
 // Styles
 import "./SlideThree.css";
 // Components
@@ -26,6 +28,13 @@ function SlideThree(props) {
           buttonFunction={openModal}
         />
         {modalIsActive && <Modal closeModal={closeModal} />}
+        <div className="slide-three_particles">
+          <img
+            className="slide-three_particle slide-three_particle__1"
+            alt="Баллончик"
+            src={Bottle}
+          />
+        </div>
       </div>
     </div>
   );

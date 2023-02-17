@@ -3,6 +3,8 @@ import React from "react";
 import "./SlideTwo.css";
 // Images
 import SpermHugeSlide2 from "./images/SpermHugeSlide2.png";
+// Components
+import ScrollableContainer from "../ScrollableContainer/ScrollableContainer";
 
 function SlideTwo(props) {
   const [particlesAreShown, setParticlesAreShown] = React.useState(false);
@@ -27,6 +29,7 @@ function SlideTwo(props) {
             />
           </div>
         )}
+        <ScrollableContainer />
       </div>
     </div>
   );

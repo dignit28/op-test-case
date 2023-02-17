@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 25px;
+  left: 66px;
+  height: 25px;
+  width: 154px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.header_title {
+  display: inline-block;
+  font-family: "Circe";
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}

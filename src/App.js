@@ -6,6 +6,8 @@ import "./fonts/fonts.css";
 import SlideOne from "./components/SlideOne/SlideOne";
 import SlideTwo from "./components/SlideTwo/SlideTwo";
 import SlideThree from "./components/SlideThree/SlideThree";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const sliderRef = React.useRef(null);
@@ -25,12 +27,20 @@ function App() {
     sliderRef.current.scrollTo({ left: 2048, behavior: "instant" });
   };
 
+  const scrollToStart = () => {
+    sliderRef.current.scrollTo({ left: 0, behavior: "smooth" });
+  };
+
   return (
-    <main className="slider" onScroll={handleScroll} ref={sliderRef}>
-      <SlideOne />
-      <SlideTwo currentPage={currentPage} />
-      <SlideThree snapToEnd={snapToEnd} />
-    </main>
+    <div>
+      <Header scrollToStart={scrollToStart} />
+      <main className="slider" onScroll={handleScroll} ref={sliderRef}>
+        <SlideOne />
+        <SlideTwo currentPage={currentPage} />
+        <SlideThree snapToEnd={snapToEnd} />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

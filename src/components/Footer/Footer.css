@@ -1,0 +1,6 @@
+.footer {
+  position: fixed;
+  left: 69px;
+  bottom: 9px;
+  z-index: 10;
+}

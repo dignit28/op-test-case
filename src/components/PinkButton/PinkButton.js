@@ -1,8 +1,8 @@
 import React from "react";
-// Styles
-import "./PinkButton.css";
 // Icons
 import arrowIcon from "./icons/arrowIcon.png";
+// Styles
+import "./PinkButton.css";
 
 const icons = {
   arrow: arrowIcon,

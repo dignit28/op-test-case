@@ -1,0 +1,38 @@
+/* Particles */
+.slide-one_particles {
+  position: relative;
+}
+
+.slide-one_particle {
+  position: absolute;
+}
+
+/* BacteriaLongSlide1 */
+.slide-one_particle__1 {
+  top: 72px;
+  left: -89px;
+}
+
+/* BlurLargeSlide1 */
+.slide-one_particle__2 {
+  top: 631px;
+  left: 344px;
+}
+
+/* BlurSmallSlide1 */
+.slide-one_particle__3 {
+  top: 30px;
+  left: 917px;
+}
+
+/* SpermUnderSlide1 */
+.slide-one_particle__4 {
+  top: 593px;
+  left: -134px;
+}
+
+/* SpermOverSlide1 */
+.slide-one_particle__5 {
+  top: 155px;
+  left: 432px;
+}

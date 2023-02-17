@@ -1,4 +1,5 @@
 import React from "react";
+// Styles
 import "./App.css";
 // Fonts
 import "./fonts/fonts.css";

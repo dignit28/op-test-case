@@ -1,8 +1,8 @@
 import React from "react";
-// Styles
-import "./SlideTwo.css";
 // Images
 import SpermHugeSlide2 from "./images/SpermHugeSlide2.png";
+// Styles
+import "./SlideTwo.css";
 // Components
 import ScrollableContainer from "../ScrollableContainer/ScrollableContainer";
 

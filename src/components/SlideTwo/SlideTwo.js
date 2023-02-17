@@ -3,7 +3,12 @@ import React from "react";
 import "./SlideTwo.css";
 
 function SlideTwo() {
-  return <div className="slide"></div>;
+  return (
+    <div className="slide">
+      <div className="slide-two">
+      </div>
+    </div>
+  );
 }
 
 export default SlideTwo;

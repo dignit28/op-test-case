@@ -3,7 +3,11 @@ import React from "react";
 import "./SlideOne.css";
 
 function SlideOne() {
-  return <div className="slide"></div>;
+  return (
+    <div className="slide">
+      <div className="slide-one"></div>
+    </div>
+  );
 }
 
 export default SlideOne;

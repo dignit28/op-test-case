@@ -1,0 +1,22 @@
+.slide-two_background-particles {
+  position: absolute;
+}
+
+.slide-two_background-particle-1 {
+  position: relative;
+  left: 366px;
+  top: 99px;
+  animation: move1 4s;
+}
+
+@keyframes move1 {
+  0% {
+    transform: translateX(87px) translateY(42px);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 100%;
+  }
+}

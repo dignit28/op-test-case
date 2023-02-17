@@ -9,10 +9,16 @@ import SlideThree from "./components/SlideThree/SlideThree";
 
 function App() {
   const sliderRef = React.useRef(null);
-  const [scrollX, setScrollX] = React.useState(0);
+
+  const [currentPage, setCurrentPage] = React.useState(1);
 
   const handleScroll = (event) => {
-    setScrollX(event.target.scrollLeft);
+    const pageRatio = event.target.scrollLeft / 1024;
+    if (Number.isInteger(pageRatio)) {
+      setCurrentPage(pageRatio + 1);
+    } else {
+      setCurrentPage(Math.ceil(pageRatio) + 0.5);
+    }
   };
 
   const snapToEnd = () => {
@@ -22,7 +28,7 @@ function App() {
   return (
     <main className="slider" onScroll={handleScroll} ref={sliderRef}>
       <SlideOne />
-      <SlideTwo />
+      <SlideTwo currentPage={currentPage} />
       <SlideThree snapToEnd={snapToEnd} />
     </main>
   );

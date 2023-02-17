@@ -38,7 +38,7 @@ function SlideOne(props) {
         </div>
         <div className="slide-one_content">
           <h2 className="slide_key-text slide_key-text__default">Привет,</h2>
-          <h1 className="slide_title-text">
+          <h1 className="slide_title-text slide_title-text__font-light slide_title-text__default-offset slide_title-text__font-size-big">
             Это <strong className="slide_title-text-bold">не</strong>{" "}
             коммерческое <span className="slide_title-text-end">задание</span>
             <PinkButton

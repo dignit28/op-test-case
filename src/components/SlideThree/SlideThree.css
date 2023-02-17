@@ -1,9 +1,113 @@
+.slide-three_content {
+  position: relative;
+  z-index: 300;
+}
+
+.slide_key-text {
+  font-family: "DIN Pro";
+  margin: 0;
+  font-size: 27px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.slide_key-text__right {
+  padding-top: 169px;
+  padding-left: 351px;
+}
+
+.slide_title-text {
+  font-family: "Gilroy";
+  margin: 0;
+  line-height: 117px;
+  text-transform: uppercase;
+}
+
+.slide_title-text__font-regular {
+  font-weight: 400;
+}
+
+.slide_title-text__font-size-medium {
+  font-size: 95px;
+  letter-spacing: 11px;
+}
+
+.slide_title-text__large-offset {
+  padding-left: 343px;
+}
+
+.slide_title-text-bold {
+  font-weight: 800;
+}
+
+.slide-three_keynote {
+  background-color: #ffffff;
+  flex-grow: 1;
+  padding-top: 53px;
+  border-radius: 40px;
+  box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+}
+
+.slide-three_keynote__default-offset {
+  padding-left: 42px;
+  padding-right: 71px;
+}
+
+.slide-three_keynote__large-offset {
+  padding-left: 125px;
+  padding-right: 47px;
+}
+
+.slide-three_keynote-text {
+  display: inline-block;
+  position: relative;
+  font-family: "DIN Pro";
+  font-size: 25px;
+  line-height: 29.8px;
+}
+
+.slide-three_keynotes-outer-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-left: 227px;
+  padding-top: 68px;
+  padding-right: 80px;
+  height: 265px;
+}
+
+.slide-three_keynotes-inner-wrapper {
+  display: flex;
+  margin-left: 40px;
+  flex-shrink: 0;
+  width: 265px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.slide-three_flex-button-wrapper {
+  margin-top: 35px;
+  flex-shrink: 0;
+}
+
+.slide-three_keynote-icon {
+  position: absolute;
+}
+
+.slide-three_keynote-icon__tall {
+  top: -86px;
+}
+
+.slide-three_keynote-icon__short {
+  top: -78px;
+}
+
 /* Particles */
 .slide-three_particles {
   top: 0;
   left: 2048;
   position: absolute;
-  z-index: 101;
+  z-index: 1001;
 }
 
 .slide-three_particle {

@@ -20,13 +20,22 @@
 .slide_title-text {
   font-family: "Gilroy";
   margin: 0;
-  padding-top: 15px;
-  padding-left: 69px;
-  font-size: 109px;
   line-height: 117px;
-  font-weight: 300;
   letter-spacing: 6.1px;
   text-transform: uppercase;
+}
+
+.slide_title-text__font-size-big {
+  padding-top: 15px;
+  font-size: 109px;
+}
+
+.slide_title-text__font-light {
+  font-weight: 300;
+}
+
+.slide_title-text__default-offset {
+  padding-left: 69px;
 }
 
 .slide_title-text-end {

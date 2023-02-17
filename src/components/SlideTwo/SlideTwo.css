@@ -1,5 +1,6 @@
 .slide-two_content {
   position: absolute;
+  z-index: 201;
 }
 
 .slide_key-text {
@@ -24,6 +25,7 @@
 /* Particles */
 .slide-two_background-particles {
   position: absolute;
+  z-index: 200;
 }
 
 .slide-two_background-particle-1 {

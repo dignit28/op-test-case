@@ -27,15 +27,15 @@ function App() {
     sliderRef.current.scrollTo({ left: 2048, behavior: "instant" });
   };
 
-  const scrollToStart = () => {
-    sliderRef.current.scrollTo({ left: 0, behavior: "smooth" });
+  const scrollToPage = (page) => {
+    sliderRef.current.scrollTo({ left: 1024 * (page - 1), behavior: "smooth" });
   };
 
   return (
     <div>
-      <Header scrollToStart={scrollToStart} />
+      <Header scrollToStart={() => scrollToPage(1)} />
       <main className="slider" onScroll={handleScroll} ref={sliderRef}>
-        <SlideOne />
+        <SlideOne scrollToSecondSlide={() => scrollToPage(2)} />
         <SlideTwo currentPage={currentPage} />
         <SlideThree snapToEnd={snapToEnd} />
       </main>

@@ -29,7 +29,12 @@ function SlideTwo(props) {
             />
           </div>
         )}
-        <ScrollableContainer />
+        <div className="slide-two_content">
+          <h2 className="slide_key-text slide_key-text__high">Текст сообщения</h2>
+          <div className="slide-two_article">
+            <ScrollableContainer />
+          </div>
+        </div>
       </div>
     </div>
   );

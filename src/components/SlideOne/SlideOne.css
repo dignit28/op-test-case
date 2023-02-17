@@ -1,17 +1,20 @@
 .slide-one_content {
-    position: absolute;
-    z-index: 2;
+  position: absolute;
+  z-index: 2;
 }
 
 .slide_key-text {
   font-family: "DIN Pro";
   margin: 0;
-  padding-top: 169px;
-  padding-left: 69px;
   font-size: 27px;
   letter-spacing: 2px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.slide_key-text__default {
+  padding-top: 169px;
+  padding-left: 69px;
 }
 
 .slide_title-text {
@@ -26,8 +29,8 @@
   text-transform: uppercase;
 }
 
-.slide_title-text-end{
-    padding-right: 36px;
+.slide_title-text-end {
+  padding-right: 36px;
 }
 
 .slide_title-text-bold {

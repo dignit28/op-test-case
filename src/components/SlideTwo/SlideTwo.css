@@ -1,3 +1,27 @@
+.slide-two_content {
+  position: absolute;
+}
+
+.slide_key-text {
+  font-family: "DIN Pro";
+  margin: 0;
+  font-size: 27px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.slide_key-text__high {
+  padding-top: 130px;
+  padding-left: 69px;
+}
+
+.slide-two_article {
+  padding-top: 47px;
+  padding-left: 69px;
+}
+
+/* Particles */
 .slide-two_background-particles {
   position: absolute;
 }

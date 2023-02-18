@@ -24,58 +24,35 @@ function SlideTwo(props) {
   return (
     <div className="slide">
       <div className="slide-two">
-        <div className={"slide-two_background-particles"}>
-          <img
-            className={
-              "slide-two_background-particle-1" +
-              (particlesAreShown
-                ? " slide-two_background-particle-1__shown"
-                : "")
-            }
-            alt="Фоновая частица"
-            src={SpermHugeSlide2}
-          />
-          <img
-            className={
-              "slide-two_background-particle-2" +
-              (particlesAreShown
-                ? " slide-two_background-particle-2__shown"
-                : "")
-            }
-            alt="Фоновая частица"
-            src={SpermMediumBottomSlide2}
-          />
-          <img
-            className={
-              "slide-two_background-particle-3" +
-              (particlesAreShown
-                ? " slide-two_background-particle-3__shown"
-                : "")
-            }
-            alt="Фоновая частица"
-            src={SpermMediumTopSlide2}
-          />
-          <img
-            className={
-              "slide-two_background-particle-4" +
-              (particlesAreShown
-                ? " slide-two_background-particle-4__shown"
-                : "")
-            }
-            alt="Фоновая частица"
-            src={SpermSmallBottomSlide2}
-          />
-          <img
-            className={
-              "slide-two_background-particle-5" +
-              (particlesAreShown
-                ? " slide-two_background-particle-5__shown"
-                : "")
-            }
-            alt="Фоновая частица"
-            src={SpermSmallTopSlide2}
-          />
-        </div>
+        {particlesAreShown && (
+          <div className={"slide-two_background-particles"}>
+            <img
+              className={"slide-two_background-particle-1"}
+              alt="Фоновая частица"
+              src={SpermHugeSlide2}
+            />
+            <img
+              className={"slide-two_background-particle-2"}
+              alt="Фоновая частица"
+              src={SpermMediumBottomSlide2}
+            />
+            <img
+              className={"slide-two_background-particle-3"}
+              alt="Фоновая частица"
+              src={SpermMediumTopSlide2}
+            />
+            <img
+              className={"slide-two_background-particle-4"}
+              alt="Фоновая частица"
+              src={SpermSmallBottomSlide2}
+            />
+            <img
+              className={"slide-two_background-particle-5"}
+              alt="Фоновая частица"
+              src={SpermSmallTopSlide2}
+            />
+          </div>
+        )}
         <div className="slide-two_content">
           <h2 className="slide_key-text slide_key-text__high">
             Текст сообщения

@@ -30,10 +30,6 @@
 
 /* SpermHugeSlide2 */
 .slide-two_background-particle-1 {
-  visibility: hidden;
-}
-
-.slide-two_background-particle-1__shown {
   position: absolute;
   visibility: visible;
   left: 366px;
@@ -42,11 +38,8 @@
 }
 
 /* SpermMediumBottomSlide2 */
-.slide-two_background-particle-2 {
-  visibility: hidden;
-}
 
-.slide-two_background-particle-2__shown {
+.slide-two_background-particle-2 {
   position: absolute;
   visibility: visible;
   left: 890px;
@@ -56,10 +49,6 @@
 
 /* SpermMediumTopSlide2 */
 .slide-two_background-particle-3 {
-  visibility: hidden;
-}
-
-.slide-two_background-particle-3__shown {
   position: absolute;
   visibility: visible;
   left: 585px;
@@ -69,11 +58,6 @@
 
 /* SpermSmallBottomSlide2 */
 .slide-two_background-particle-4 {
-  visibility: hidden;
-  visibility: visible;
-}
-
-.slide-two_background-particle-4__shown {
   position: absolute;
   left: 885px;
   top: 514px;
@@ -82,10 +66,6 @@
 
 /* SpermSmallTopSlide2 */
 .slide-two_background-particle-5 {
-  visibility: hidden;
-}
-
-.slide-two_background-particle-5__shown {
   position: absolute;
   visibility: visible;
   left: 710px;

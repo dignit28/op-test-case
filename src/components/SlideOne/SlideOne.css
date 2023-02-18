@@ -100,3 +100,106 @@
   top: 155px;
   left: 432px;
 }
+
+/* BacteriaPointyBottomSlide1 */
+.slide-one_particle__6 {
+  top: 641px;
+  left: 542px;
+  animation: slideOnePart6 5s linear infinite;
+}
+
+@keyframes slideOnePart6 {
+  0% {
+    transform: scale(1) translateX(0) translateY(0);
+  }
+  25% {
+    transform: scale(1.05) translateX(2px) translateY(-4px);
+  }
+  50% {
+    transform: scale(1) translateX(0) translateY(0);
+  }
+  75% {
+    transform: scale(0.95) translateX(-4px) translateY(-2px);
+  }
+  100% {
+    transform: scale(1) translateX(0) translateY(0);
+  }
+}
+
+/* BacteriaSmoothBottomSlide1 */
+.slide-one_particle__7 {
+  top: 503px;
+  left: 22px;
+  animation: slideOnePart7 15s linear infinite;
+}
+
+@keyframes slideOnePart7 {
+  0% {
+    transform: rotate(0) translateX(0) translateY(0);
+  }
+  25% {
+    transform: rotate(2deg) translateX(35px) translateY(20px);
+  }
+  50% {
+    transform: rotate(0) translateX(70px) translateY(40px);
+  }
+  75% {
+    transform: rotate(-2deg) translateX(35px) translateY(20px);
+  }
+  100% {
+    transform: rotate(0) translateX(0) translateY(0);
+  }
+}
+
+/* BacteriaSmoothBottomSlide1 */
+.slide-one_particle__8 {
+  top: 61px;
+  left: 745px;
+  animation: slideOnePart8 15s linear infinite;
+}
+
+@keyframes slideOnePart8 {
+    0% {
+      transform: scale(1) translateX(0) translateY(0);
+    }
+    50% {
+      transform: scale(0.95) translateX(80px) translateY(20px);
+    }
+    75% {
+      transform: scale(1.1) translateX(45px) translateY(30px);
+    }
+    100% {
+      transform: scale(1) translateX(0) translateY(0);
+    }
+}
+
+/* BacteriaPointyTopSlide1 */
+.slide-one_particle__9 {
+  top: 200px;
+  left: 861px;
+  animation: slideOnePart9 20s linear infinite;
+}
+
+@keyframes slideOnePart9 {
+  0% {
+    transform: rotate(0deg) translateX(0) translateY(0);
+  }
+  33% {
+    transform: rotate(45deg) translateX(-140px) translateY(-20px);
+  }
+  66% {
+    transform: rotate(90deg) translateX(-15px) translateY(-40px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0) translateY(0);
+  }
+  /* 60% {
+    transform: rotate(30deg) translateX(-13px) translateY(-60px);
+  }
+  80% {
+    transform: rotate(-30deg) translateX(-110px) translateY(-30px);
+  }
+  100% {
+    transform: rotate(0) translateX(0) translateY(0);
+  } */
+}

@@ -45,7 +45,7 @@ function App() {
   const scrollToPage = (page) => {
     if (!scrollLock)
       sliderRef.current.scrollTo({
-        left: 1024 * (page - 1),
+        left: 1024 * (Math.ceil(page) - 1),
         behavior: "smooth",
       });
   };

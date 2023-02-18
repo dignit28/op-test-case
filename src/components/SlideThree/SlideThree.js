@@ -23,10 +23,12 @@ function SlideThree(props) {
   const openModal = () => {
     props.snapToEnd();
     setModalIsActive(true);
+    props.enableScrollLock();
   };
 
   const closeModal = () => {
     setModalIsActive(false);
+    props.disableScrollLock();
   };
 
   return (

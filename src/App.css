@@ -2,12 +2,11 @@
   position: absolute;
   top: 0;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   height: 100%;
   width: 100%;
   flex-flow: row nowrap;
-  scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
 
@@ -27,7 +26,5 @@
 
 .slide {
   width: 100%;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
   flex: none;
 }

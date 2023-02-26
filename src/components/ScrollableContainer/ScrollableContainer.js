@@ -8,7 +8,6 @@ const THUMB_HEIGHT = 104;
 function ScrollableContainer() {
   const thumbRef = React.useRef(null);
   const contentRef = React.useRef(null);
-  const [isDragging, setIsDragging] = React.useState(false);
   const [initialDragPosition, setInitialDragPosition] = React.useState(null);
   const [initialScrollTop, setInitialScrollTop] = React.useState(0);
 
@@ -36,74 +35,20 @@ function ScrollableContainer() {
     contentRef.current.scrollTo({ top: newScrollTop, behavior: "smooth" });
   };
 
-  const handleThumbMouseDown = (event) => {
-    setInitialDragPosition(event.clientY);
-    setInitialScrollTop(contentRef.current.scrollTop);
-    setIsDragging(true);
-  };
-
   const handleTouchStart = (event) => {
     setInitialDragPosition(event.touches[0].clientY);
     setInitialScrollTop(contentRef.current.scrollTop);
-    setIsDragging(true);
   };
 
-  const handleThumbMouseUp = React.useCallback(() => {
-    setIsDragging(false);
-  }, []);
-
-  const handleThumbMouseMove = React.useCallback(
-    (event) => {
-      if (isDragging) {
-        const { scrollHeight } = contentRef.current;
-        const deltaThumb = event.clientY - initialDragPosition;
-        const scrollRatio =
-          (scrollHeight - TRACK_HEIGHT) / (TRACK_HEIGHT - THUMB_HEIGHT);
-        const delta = deltaThumb * scrollRatio;
-        const newScrollTop = initialScrollTop + delta;
-        contentRef.current.scrollTop = newScrollTop;
-      }
-    },
-    [isDragging, initialDragPosition, initialScrollTop]
-  );
-
-  const handleTouchMove = React.useCallback(
-    (event) => {
-      if (isDragging) {
-        const { scrollHeight } = contentRef.current;
-        const deltaThumb = event.touches[0].clientY - initialDragPosition;
-        const scrollRatio =
-          (scrollHeight - TRACK_HEIGHT) / (TRACK_HEIGHT - THUMB_HEIGHT);
-        const delta = deltaThumb * scrollRatio;
-        const newScrollTop = initialScrollTop + delta;
-        contentRef.current.scrollTop = newScrollTop;
-      }
-    },
-    [isDragging, initialDragPosition, initialScrollTop]
-  );
-
-  React.useEffect(() => {
-    const ref = contentRef.current;
-    ref.addEventListener("scroll", handleThumbPosition);
-    return () => {
-      ref.removeEventListener("scroll", handleThumbPosition);
-    };
-  }, []);
-
-  React.useEffect(() => {
-    document.addEventListener("mousemove", handleThumbMouseMove);
-    document.addEventListener("touchmove", handleTouchMove);
-    document.addEventListener("mouseup", handleThumbMouseUp);
-    document.addEventListener("touchend", handleThumbMouseUp);
-    document.addEventListener("mouseleave", handleThumbMouseUp);
-    return () => {
-      document.removeEventListener("mousemove", handleThumbMouseMove);
-      document.removeEventListener("touchmove", handleTouchMove);
-      document.removeEventListener("mouseup", handleThumbMouseUp);
-      document.removeEventListener("touchend", handleThumbMouseUp);
-      document.removeEventListener("mouseleave", handleThumbMouseUp);
-    };
-  }, [handleThumbMouseMove, handleThumbMouseUp, handleTouchMove]);
+  const handleTouchMove = (event) => {
+    const { scrollHeight } = contentRef.current;
+    const deltaThumb = event.touches[0].clientY - initialDragPosition;
+    const scrollRatio =
+      (scrollHeight - TRACK_HEIGHT) / (TRACK_HEIGHT - THUMB_HEIGHT);
+    const delta = deltaThumb * scrollRatio;
+    const newScrollTop = initialScrollTop + delta;
+    contentRef.current.scrollTop = newScrollTop;
+  };
 
   return (
     <div className="scroller_wrapper">
@@ -113,8 +58,8 @@ function ScrollableContainer() {
           id="scroller_thumb"
           className="scroller_thumb"
           ref={thumbRef}
-          onMouseDown={handleThumbMouseDown}
           onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
         ></div>
       </div>
       <div className="scroller_content-wrapper">

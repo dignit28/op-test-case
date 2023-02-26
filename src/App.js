@@ -26,7 +26,7 @@ function App() {
   };
 
   const handleTouchStart = (event) => {
-    if (!scrollLock) setTouchStart(event.changedTouches[0].clientX);
+    setTouchStart(event.changedTouches[0].clientX);
   };
 
   const handleScroll = (event) => {
@@ -76,7 +76,11 @@ function App() {
         ref={sliderRef}
       >
         <SlideOne scrollToSecondSlide={() => scrollToPage(2)} />
-        <SlideTwo currentPage={currentPage} />
+        <SlideTwo
+          enableScrollLock={enableScrollLock}
+          disableScrollLock={disableScrollLock}
+          currentPage={currentPage}
+        />
         <SlideThree
           snapToEnd={snapToEnd}
           enableScrollLock={enableScrollLock}

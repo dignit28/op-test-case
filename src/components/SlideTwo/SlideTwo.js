@@ -58,7 +58,10 @@ function SlideTwo(props) {
             Текст сообщения
           </h2>
           <div className="slide-two_article">
-            <ScrollableContainer />
+            <ScrollableContainer
+              disableScrollLock={props.disableScrollLock}
+              enableScrollLock={props.enableScrollLock}
+            />
           </div>
         </div>
       </div>

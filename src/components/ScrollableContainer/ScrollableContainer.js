@@ -5,13 +5,15 @@ import "./ScrollableContainer.css";
 const TRACK_HEIGHT = 445;
 const THUMB_HEIGHT = 104;
 
-function ScrollableContainer() {
+function ScrollableContainer(props) {
   const thumbRef = React.useRef(null);
   const contentRef = React.useRef(null);
   const [initialDragPosition, setInitialDragPosition] = React.useState(null);
   const [initialScrollTop, setInitialScrollTop] = React.useState(0);
+  const [isTouchingScrollable, setIsTouchingScrollable] = React.useState(false);
 
-  const handleThumbPosition = () => {
+  const handleScroll = () => {
+    if (isTouchingScrollable) props.enableScrollLock();
     const { scrollTop, scrollHeight } = contentRef.current;
     const newThumbTop =
       (scrollTop / (scrollHeight - TRACK_HEIGHT)) *
@@ -35,9 +37,15 @@ function ScrollableContainer() {
     contentRef.current.scrollTo({ top: newScrollTop, behavior: "smooth" });
   };
 
-  const handleTouchStart = (event) => {
+  const handleThumbTouchStart = (event) => {
+    setIsTouchingScrollable(true);
     setInitialDragPosition(event.touches[0].clientY);
     setInitialScrollTop(contentRef.current.scrollTop);
+  };
+
+  const handleScrollableTouchEnd = () => {
+    setIsTouchingScrollable(false);
+    props.disableScrollLock();
   };
 
   const handleTouchMove = (event) => {
@@ -58,8 +66,9 @@ function ScrollableContainer() {
           id="scroller_thumb"
           className="scroller_thumb"
           ref={thumbRef}
-          onTouchStart={handleTouchStart}
+          onTouchStart={handleThumbTouchStart}
           onTouchMove={handleTouchMove}
+          onTouchEnd={handleScrollableTouchEnd}
         ></div>
       </div>
       <div className="scroller_content-wrapper">
@@ -68,7 +77,9 @@ function ScrollableContainer() {
           id="scroller_content"
           className="scroller_content"
           ref={contentRef}
-          onScroll={handleThumbPosition}
+          onScroll={handleScroll}
+          onTouchStart={() => setIsTouchingScrollable(true)}
+          onTouchEnd={handleScrollableTouchEnd}
         >
           <span className="scroller_text scroller_text__bold">
             Lorem ipsum dolor sit amet

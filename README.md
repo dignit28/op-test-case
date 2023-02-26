@@ -1,6 +1,6 @@
 # op-test-case
 
-##### [Лайв-версия](https://dignit28.github.io/op-test-case/)
+### [Лайв-версия](https://dignit28.github.io/op-test-case/)
 
 ## Тестовое задание
 
@@ -17,3 +17,7 @@
 ## Сбилженная версия
 
 Сбилженная версия находится в [другой ветви этого репозитория](https://github.com/dignit28/op-test-case/tree/gh-pages).
+
+## История изменений
+
+Историю изменений Лайв-версии проекта можно посмотреть в [CHANGELOG.md](https://github.com/dignit28/op-test-case/blob/master/CHANGELOG.md).
